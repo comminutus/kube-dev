@@ -8,6 +8,8 @@
 `kube-dev` is a container image to be used as a shell for development with Kubernetes, particularly when using [FluxCD](https://fluxcd.io/), [Fedora CoreOS](https://fedoraproject.org/coreos/) and [Terraform](https://www.terraform.io/). 
 
 ## Features
+- [CoreOS Butane](https://github.com/coreos/butane)
+- [direnv](https://github.com/direnv/direnv)
 - [FluxCD](https://fluxcd.io/)
 - [krew](https://github.com/kubernetes-sigs/krew)
   Plugins:
@@ -15,6 +17,7 @@
 - [kubectl](https://github.com/kubernetes/kubectl)
 - [Helm](https://github.com/helm/helm)
 - [Mozilla SOPS](https://github.com/getsops/sops)
+- [pass](https://www.passwordstore.org/)
 - [Terraform](https://www.terraform.io/)
 - [yq](https://github.com/mikefarah/yq)
 - [ytt](https://github.com/carvel-dev/ytt)

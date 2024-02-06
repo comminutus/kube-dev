@@ -5,9 +5,6 @@ FROM ${BASE_IMAGE}:${BASE_TAG}
 # dnf-plugins-core required to add HashiCorp repo
 RUN dnf install -y dnf-plugins-core
 
-# Add HashiCorp repo
-RUN dnf config-manager --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
-
 # dnf packages
 RUN dnf install -y      \
     butane              \
@@ -15,8 +12,7 @@ RUN dnf install -y      \
     direnv              \
     gettext             \
     make                \
-    pass                \
-    terraform
+    pass
 
 # yq (like jq, but for yaml)
 RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/local/bin/yq &&  \
@@ -25,6 +21,12 @@ RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
 # ytt (YAML templating tool: https://carvel.dev/ytt/)
 RUN wget https://github.com/carvel-dev/ytt/releases/latest/download/ytt-linux-amd64 -O /usr/local/bin/ytt &&  \
     chmod +x /usr/local/bin/ytt
+
+# OpenTofu
+RUN curl --proto '=https' --tlsv1.2 -fsSL https://get.opentofu.org/install-opentofu.sh -o install-opentofu.sh   && \
+    chmod +x install-opentofu.sh                                                                                && \
+    ./install-opentofu.sh --install-method rpm                                                                  && \
+    rm install-opentofu.sh
 
 # kubectl
 RUN export K8S_VERSION=$(curl -L -s https://dl.k8s.io/release/stable.txt);          \

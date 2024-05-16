@@ -1,5 +1,5 @@
 ARG BASE_IMAGE=ghcr.io/comminutus/base-shell-env
-ARG BASE_TAG=v0.3.1
+ARG BASE_TAG=v0.4.0
 FROM ${BASE_IMAGE}:${BASE_TAG}
 
 # dnf-plugins-core required to add HashiCorp repo

@@ -32,10 +32,15 @@ You must have a container runtime installed, like [Podman](https://github.com/co
 
 Pull down the image and use it directly with Distrobox or Toolbox:
 ```
-podman pull ghcr.io/comminutus/kube-dev
-distrobox create -i comminutus/kube-dev
+distrobox create -i ghcr.io/comminutus/kube-dev
 distrobox enter kube-dev
 ```
+_or yolo_
+
+```
+curl -s https://raw.githubusercontent.com/comminutus/vscodium-distrobox/master/create-distrobox.bash | bash -c 'eval "$(cat)"'
+```
+
 
 ## License
 

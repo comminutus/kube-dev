@@ -1,4 +1,4 @@
-FROM ghcr.io/comminutus/base-shell-env:v1.1.0
+FROM ghcr.io/comminutus/base-shell-env:v1.2.0
 
 WORKDIR "$HOME"
 

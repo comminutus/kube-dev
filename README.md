@@ -38,7 +38,7 @@ distrobox enter kube-dev
 _or yolo_
 
 ```
-curl -s https://raw.githubusercontent.com/comminutus/vscodium-distrobox/master/create-distrobox.bash | bash -c 'eval "$(cat)"'
+curl -s https://raw.githubusercontent.com/comminutus/kube-dev/master/create-distrobox.bash | bash -c 'eval "$(cat)"'
 ```
 
 
